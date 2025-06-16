@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple To-Do List</title>
+  <style>
+    body {
+        background-color: lab(92.34% 6.12 2.2); /* Light gray background */
+        color: black; /* Ensure text stays black */
+        font-family: Arial, sans-serif; /* Optional: better font */
+    }
+</style>
+  <style>
+    li.completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    #taskList {
+      cursor: pointer;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    li:hover {
+      background-color: #f9f9f9;
+    }
+    input[type="text"] {
+      padding: 6px;
+      width: 250px;
+      font-size: 16px;
+    }
+    button {
+      padding: 6px 12px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>To-Do List</h2>
+<p>
+  1. Click once on the task added to mark it completed.<br> 
+  2. Double-click to remove the task.
+</p>
+<input type="text" id="taskInput" placeholder="Enter a task" aria-label="Task input" />
+<button id="addBtn">Add</button>
+
+<ul id="taskList" class="tasklist" aria-live="polite" aria-label="Task list"></ul>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById("taskInput");
+    const addBtn = document.getElementById("addBtn");
+    const taskList = document.getElementById("taskList");
+
+    function addTask() {
+      const taskText = input.value.trim();
+      if (taskText === "") {
+        alert("Please enter a task.");
+        return;
+      }
+
+      // Optional: Prevent duplicate tasks
+      const tasks = Array.from(taskList.children).map(li => li.textContent);
+      if (tasks.includes(taskText)) {
+        alert("This task already exists.");
+        input.value = "";
+        return;
+      }
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      li.addEventListener("click", () => {
+        li.classList.toggle("completed");
+      });
+
+      li.addEventListener("dblclick", () => {
+        li.remove();
+      });
+
+      taskList.appendChild(li);
+      input.value = "";
+      input.focus();
+    }
+
+    addBtn.addEventListener("click", addTask);
+
+    // Add task on pressing Enter key
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        addTask();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

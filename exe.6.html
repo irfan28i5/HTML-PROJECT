@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Irfan Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            perspective: 1000px; /* enables 3D perspective */
+        }
+
+        header {
+            background: #339;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            animation: headerScale 1s ease forwards;
+        }
+
+        @keyframes headerScale {
+            0% {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        nav ul li:hover {
+            transform: rotateX(15deg) scale(1.1);
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #66aaff;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+            transform-style: preserve-3d;
+            cursor: default;
+        }
+
+        section:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transform: translateZ(20px) scale(1.02);
+        }
+
+        h2 {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        section:hover h2 {
+            color: #339;
+        }
+
+        article {
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        article:hover {
+            transform: translateZ(10px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        /* Project links styled like buttons */
+        section#projects a {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 15px;
+            background-color: #339;
+            color: #fff !important;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(51, 153, 255, 0.3);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        section#projects a:hover {
+            background-color: #2277cc;
+            transform: translateZ(5px) scale(1.05);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mohammad Irfan</h1>
+        <p>Video Editor | Photographer | Student</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#personal-details">Personal Details</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="personal-details">
+            <h2>Personal Details</h2>
+            <p><strong>Email:</strong> irfanmohammad28.10@gmail.com</p>
+            <p><strong>Location:</strong> Hyderabad, India</p>
+            <p><strong>About Me:</strong> My name is Mohammad Irfan, and I am currently a B.Tech student at Sreenidhi University. I have a strong passion for technology and innovation, which drives my academic pursuits. In addition to my studies, I enjoy playing video games, which allows me to unwind and engage in strategic thinking. I am proud to have achieved an <mark>All India Rank of 819 in the JEE B.Arch 2024</mark>, reflecting my dedication and hard work in the field of engineering.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>As a fresher, I am eager to learn and develop my skills in various areas. Here are some of the skills I possess:</p>
+            <ul>
+                <li>Programming Languages: C++, Python</li>
+                <li>Web Development: HTML, CSS</li>
+                <li>Software Tools: CapCut (expert), Canva, Picsart, Lightroom, Adobe Photoshop, video editing software</li>
+                <li>Problem Solving: Strong analytical and problem-solving skills</li>
+                <li>Team Collaboration: Ability to work effectively in team settings</li>
+                <li>Photography: Serving as the Photography President, I have honed my skills in capturing and editing images, as well as leading photography projects</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>Mental Health Awareness – SDG 3 Video Project</h3>
+                <p>A 5–7 minute awareness video project focusing on mental health, created for SDG Goal 3: Good Health and Well-being. Involves scriptwriting, filming, editing, and character design using AI tools.</p>
+                <a href="#">Watch Video (Coming Soon)</a>
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> <a href="mailto:irfanmohammad28.10@gmail.com">irfanmohammad28.10@gmail.com</a></p>
+            <p><strong>Instagram:</strong> <a href="https://instagram.com/irfan28i" target="_blank" rel="noopener noreferrer">@irfan28i</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mohammad Irfan. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sreenidhi University</title>
+  <style>
+    body {
+        background-color: lab(92.34% 6.12 2.2); /* Light gray background */
+        color: black; /* Ensure text stays black */
+        font-family: Arial, sans-serif; /* Optional: better font */
+    }
+</style>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    a {
+      color: #FFD700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #ffc107cc;
+      outline: none;
+    }
+
+    /* Header */
+    header {
+      background-color: #002147;
+      color: #FFD700;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 1rem;
+      box-shadow: inset 0 -3px 8px rgba(255,215,0,0.25);
+    }
+    nav a {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      background-color: transparent;
+      color: #fff;
+      user-select: none;
+    }
+    nav a:hover,
+    nav a:focus {
+      background-color: #FFD700;
+      color: #002147;
+      box-shadow: 0 0 8px #ffd700aa;
+      outline-offset: 3px;
+    }
+
+    /* Main content */
+    main {
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      background: #fff;
+      padding: 2.5rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    main section + section {
+      margin-top: 3rem;
+    }
+    main h2 {
+      color: #002147;
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 3px solid #FFD700;
+      padding-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    main p {
+      font-size: 1.125rem;
+      color: #444;
+      margin-bottom: 1.25rem;
+    }
+    main ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    main li {
+      background: #f0f4ff;
+      border-left: 5px solid #002147;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #002147;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    main li strong {
+      color: #004080;
+    }
+    main li:hover {
+      background-color: #d6e2ff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #002147;
+      color: #ccc;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      user-select: none;
+      box-shadow: inset 0 3px 6px rgba(255, 215, 0, 0.15);
+    }
+    footer small {
+      display: block;
+      margin-top: 0.25rem;
+      font-weight: 400;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main {
+        margin: 2rem 1rem 3rem;
+        padding: 1.5rem 1.5rem;
+      }
+      main h2 {
+        font-size: 1.6rem;
+      }
+      main li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header role="banner">
+    <h1>Sreenidhi University</h1>
+  </header>
+
+  <nav role="navigation" aria-label="Primary Navigation">
+    <a href="#" tabindex="0">Home</a>
+    <a href="#" tabindex="0">About Us</a>
+    <a href="#" tabindex="0">Departments</a>
+    <a href="#" tabindex="0">Admissions</a>
+    <a href="#" tabindex="0">Contact</a>
+  </nav>
+
+  <main role="main">
+    <section aria-labelledby="welcome-title">
+      <h2 id="welcome-title">Welcome to Sreenidhi University</h2>
+      <p>
+        Sreenidhi University excels in engineering, technology, and research with an industry-aligned curriculum and hands-on learning. We nurture innovators and leaders with cutting-edge facilities.
+      </p>
+    </section>
+
+    <section aria-labelledby="departments-title">
+      <h2 id="departments-title">Departments</h2>
+      <p>
+        Our departments offer cutting-edge programs that combine theory and practical learning. They foster innovation, research, and skill development to meet industry and societal needs.
+      </p>
+      <ul>
+        <li><strong>CSE:</strong> B Tech - Computer Science and Engineering</li>
+        <li><strong>AI & ML:</strong> B Tech - Artificial Intelligence & Machine Learning</li>
+        <li><strong>Data Science:</strong> B Tech - Data Science</li>
+        <li><strong>Cyber Security:</strong> B Tech - Cyber Security</li>
+        <li><strong>Cloud ERP w SAP:</strong> CSE - Cloud ERP with SAP Integration</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2025 Sreenidhi University. All Rights Reserved.
+    <small>Designed with passion for quality education.</small>
+  </footer>
+
+</body>
+</html>

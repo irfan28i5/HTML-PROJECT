@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About Me - Aesthetic</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+  }
+  header {
+    background: #6a11cb;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 3rem 1rem 4rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 30px rgba(101,58,255,0.3);
+    clip-path: ellipse(150% 100% at 50% 0%);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: fadeInDown 1s forwards 0.5s;
+  }
+  header p {
+    margin-top: 0.5rem;
+    font-weight: 300;
+    font-size: 1.25rem;
+    opacity: 0;
+    animation: fadeInDown 1s forwards 1s;
+  }
+  main {
+    max-width: 900px;
+    background: #fff;
+    margin: -6rem auto 3rem;
+    padding: 3rem 2rem 4rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(101,58,255,0.1);
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1.7s;
+  }
+  .container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .profile-pic {
+    flex: 0 0 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(101,58,255,0.25);
+    border: 6px solid #6a11cb;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: popInScale 0.8s forwards 2.2s;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  .profile-pic:hover {
+    box-shadow: 0 20px 40px rgba(101,58,255,0.6);
+  }
+  .profile-pic img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    flex: 1 1 350px;
+  }
+  h2 {
+    color: #6a11cb;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    position: relative;
+  }
+  h2::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background: #6a11cb;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.6rem;
+    color: #444;
+    transition: color 0.3s ease;
+  }
+  section {
+    margin-bottom: 2.5rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem 0 3rem;
+    color: #6a11cb;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+  }
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes popInScale {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: #2575fc;
+  }
+  @media (max-width: 600px) {
+    .container-flex {
+      flex-direction: column;
+      text-align: center;
+    }
+    .profile-pic {
+      margin: 0 auto;
+    }
+    .content {
+      flex: 1 1 auto;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <p>Creative Developer & Designer</p>
+  </header>
+  <main>
+    <div class="container-flex">
+      <div class="profile-pic" aria-label="Profile photo of Mohammad Irfan" tabindex="0">
+        <img src="irf.jpg" alt="Photo of Mohammad Irfan" />
+      </div>
+      <div class="content">
+        <section>
+          <h2>Hello! I'm Mohammad Irfan</h2>
+          <p>Welcome to my personal page! I’m a passionate coder and creative problem solver from Hyderabad, dedicated to building engaging and meaningful digital experiences.</p>
+        </section>
+        
+        <section>
+          <h2>Background</h2>
+          <p>I am currently pursuing a B.Tech in Computer Science at Sreenidhi University, Hyderabad. I have a strong foundation in HTML, CSS, C++, and creative problem-solving. I am passionate about coding and have worked on several projects, including web-based applications. I also have experience with data structures and general web development concepts. 
+            <div></div>Beyond academics, I serve as the President of the Photography Club at Sreenidhi University and manage an official photography page. I’ve been actively involved in event planning at the university. Additionally, I am exploring content creation through Instagram Reels and short films that convey social messages, along with video editing.</p>
+        </section>
+        <section>
+          <h2>Contact Me</h2>
+          <p>If you’d like to chat or collaborate, feel free to <a href="mailto:2401100cse0031@cse.suh.edu.in">email me</a> or find me on <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Mohammad Irfan. All rights reserved.</p>
+  </footer>
+</body>
+</html>

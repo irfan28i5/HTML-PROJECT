@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyper Links HTML</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b2a44); /* Dark Blue gradient background */
+      color: #a9c0d9; /* Light blue-ish text */
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      animation: fadeIn 1s ease-in; /* Fade-in animation for the body */
+    }
+
+    header h1 {
+      text-align: center;
+      color: #e0e7ff; /* Soft light blue */
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 8px #1e40af;
+    }
+
+    a {
+      display: block;
+      width: 80%;
+      max-width: 260px;
+      background: linear-gradient(135deg, #1e40af, #3b82f6); /* Dark to medium blue gradient */
+      color: #e0e7ff; /* Light text */
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 8px rgba(30, 64, 175, 0.6);
+      text-align: left;
+      margin: 12px auto;
+      transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease, color 0.4s ease;
+      letter-spacing: 0.8px;
+      position: relative; /* For animation effect */
+      overflow: hidden; /* To contain the pseudo-element */
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: transform 0.5s ease;
+      transform: translate(-50%, -50%) scale(0);
+      z-index: 0; /* Behind the text */
+    }
+
+    a:hover::before {
+      transform: translate(-50%, -50%) scale(1); /* Scale effect on hover */
+    }
+
+    a:hover, a:focus {
+      background: linear-gradient(135deg, #3b82f6, #1e40af); /* Reverse gradient on hover */
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.8);
+      color: #bbdefb; /* Lighter blue text on hover */
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Hyperlinks</h1></header>
+
+  <a href="exe.1a.html" target="r1">EXEP 1A - TEXT FORMATTING</a>
+  <a href="exe.1b.html" target="r1">EXEP 1B - LISTS</a>
+  <a href="exe.1c.html" target="r1">EXEP 1C - HYPERLINKS</a>
+  <a href="exe.2a.html" target="r1">EXEP 2A - MARKS TABLE</a>
+  <a href="exe.2b.html" target="r1">EXEP 2B - TIME TABLE</a>
+  <a href="exe.3.html" target="r1">EXEP 3 - JOB APPLICATION</a>
+  <a href="exe.4.html" target="r1">EXEP 4 - REDIFFMAIL</a>
+  <a href="exe.5.html" target="r1">EXEP 5 - WEBPAGE</a>
+  <a href="exe.6.html" target="r1">EXEP 6 - PORTFOLIO</a>
+  <a href="exe.7.html" target="r1">EXEP 7 - PERSONAL WEBPAGE</a>
+  <a href="exe.8.html" target="r1">EXEP 8 - COLLEGE WEBPAGE</a>
+  <a href="exe.9.html" target="r1">EXEP 9 - JOB APPLICATION JS</a>
+  <a href="exe.10.html" target="r1">EXEP 10 - CALCULATOR</a>
+  <a href="exe.11a.html" target="r1">EXEP 11A - QUIZ</a>
+  <a href="exe.11b.html" target="r1">EXEP 11B - NAME SIZE</a>
+  <a href="exe.12.html" target="r1">EXEP 12 - TO DO LIST</a>
+  <a href="exe.13.html" target="r1">EXEP 13 - CRICKETER'S GALLERY</a>
+  <a href="registration-form.html" target="r1">STUDENT REGISTRATION FORM</a>
+</body>
+</html>

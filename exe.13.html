@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cricketer Image Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .gallery-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    #mainImage {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 120px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease, border 0.3s ease;
+      cursor: pointer;
+      border: 3px solid transparent;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.05);
+      border-color: #007BFF;
+    }
+
+    @media (max-width: 600px) {
+      .thumbnails img {
+        width: 90px;
+        height: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h2>Cricketer Image Gallery</h2>
+    <img id="mainImage" src="https://media.istockphoto.com/id/177427917/photo/close-up-of-red-cricket-ball-and-bat-sitting-on-grass.jpg?s=612x612&w=0&k=20&c=DcorerbBUeDNTfld3OclgHxCty4jih2yDCzipffX6zw=" alt="Main Cricketer Image">
+
+    <div class="thumbnails">
+      <img src="https://cdn.britannica.com/48/252748-050-C514EFDB/Virat-Kohli-India-celebrates-50th-century-Cricket-November-15-2023.jpg" onclick="changeImage(this)" alt="Virat Kohli">
+      <img src="https://im.indiatimes.in/facebook/2019/Jul/ms_dhoni_himself_has_not_spoken_on_his_retirement_plans_1563350842.jpg" onclick="changeImage(this)" alt="MS Dhoni">
+      <img src="https://cf-img-a-in.tosshub.com/sites/visualstory/stories/2022_10/story_11730/assets/2.jpeg?time=1665914170" onclick="changeImage(this)" alt="Jacques Kallis">
+      <img src="https://library.sportingnews.com/styles/twitter_card_120x120/s3/2021-10/tendulkar-sachin1113-ap-ftrjpg_1xtmo2mjlpc8z1vxvvnb0776vi.jpg?itok=Fcywr8Sc" onclick="changeImage(this)" alt="Sachin Tendulkar">
+      <img src="https://ichef.bbci.co.uk/ace/standard/2560/cpsprodpb/26b9/live/c7ffff60-e542-11ef-b52b-2f7aceb40199.jpg" onclick="changeImage(this)" alt="Steve Smith">
+    </div>
+  </div>
+
+  <script>
+    function changeImage(img) {
+      const mainImage = document.getElementById("mainImage");
+      mainImage.style.opacity = 0.6;
+      setTimeout(() => {
+        mainImage.src = img.src;
+        mainImage.alt = img.alt;
+        mainImage.style.opacity = 1;
+      }, 150);
+    }
+  </script>
+
+</body>
+</html>

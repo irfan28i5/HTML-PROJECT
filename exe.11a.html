@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5-Question Cricket Quiz</title>
+    <style>
+        body {
+            background-color: lab(92.34% 6.12 2.2); /* Light gray background */
+            color: black; /* Ensure text stays black */
+            font-family: Arial, sans-serif; /* Optional: better font */
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .quiz-box {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .correct {
+            color: green;
+        }
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Simple 5-Question Cricket Quiz</h2>
+
+<form id="quizForm">
+    <div class="quiz-box">
+        <h3>Q1. Who is known as the 'God of Cricket'?</h3>
+        <label><input type="radio" name="q1" value="Sachin Tendulkar"> Sachin Tendulkar</label><br>
+        <label><input type="radio" name="q1" value="Virat Kohli"> Virat Kohli</label><br>
+        <label><input type="radio" name="q1" value="MS Dhoni"> MS Dhoni</label><br>
+        <label><input type="radio" name="q1" value="Kapil Dev"> Kapil Dev</label>
+    </div>
+
+    <div class="quiz-box">
+        <h3>Q2. Who is known as 'Thala' in cricket?</h3>
+        <label><input type="radio" name="q2" value="MS Dhoni"> MS Dhoni</label><br>
+        <label><input type="radio" name="q2" value="Virat Kohli"> Virat Kohli</label><br>
+        <label><input type="radio" name="q2" value="Rohit Sharma"> Rohit Sharma</label><br>
+        <label><input type="radio" name="q2" value="Suresh Raina"> Suresh Raina</label>
+    </div>
+
+    <div class="quiz-box">
+        <h3>Q3. How many players are there in a cricket team?</h3>
+        <label><input type="radio" name="q3" value="9"> 9</label><br>
+        <label><input type="radio" name="q3" value="10"> 10</label><br>
+        <label><input type="radio" name="q3" value="11"> 11</label><br>
+        <label><input type="radio" name="q3" value="12"> 12</label>
+    </div>
+
+    <div class="quiz-box">
+        <h3>Q4. What does LBW stand for in cricket?</h3>
+        <label><input type="radio" name="q4" value="Leg Before Wicket"> Leg Before Wicket</label><br>
+        <label><input type="radio" name="q4" value="Long Ball Wide"> Long Ball Wide</label><br>
+        <label><input type="radio" name="q4" value="Left Bat Wave"> Left Bat Wave</label><br>
+        <label><input type="radio" name="q4" value="Low Bouncer Warning"> Low Bouncer Warning</label>
+    </div>
+
+    <div class="quiz-box">
+        <h3>Q5. Which country has won the most ICC Cricket World Cups (ODI) as of 2023?</h3>
+        <label><input type="radio" name="q5" value="India"> India</label><br>
+        <label><input type="radio" name="q5" value="Australia"> Australia</label><br>
+        <label><input type="radio" name="q5" value="England"> England</label><br>
+        <label><input type="radio" name="q5" value="West Indies"> West Indies</label>
+    </div>
+
+    <button type="button" onclick="submitQuiz()">Submit</button>
+</form>
+
+<div id="result" class="result"></div>
+
+<script>
+    function submitQuiz() {
+        var answers = {
+            q1: "Sachin Tendulkar",
+            q2: "MS Dhoni",
+            q3: "11",
+            q4: "Leg Before Wicket",
+            q5: "Australia"
+        };
+
+        var score = 0;
+        var totalQuestions = Object.keys(answers).length;
+        var resultText = "";
+
+        for (var q in answers) {
+            var options = document.getElementsByName(q);
+            var selected = null;
+            for (var i = 0; i < options.length; i++) {
+                if (options[i].checked) {
+                    selected = options[i].value;
+                    break;
+                }
+            }
+            if (selected === null) {
+                alert("Please answer all questions before submitting.");
+                return;
+            }
+
+            if (selected === answers[q]) {
+                score++;
+                resultText += `<p class="correct">Question ${q.slice(1)}: Correct!</p>`;
+            } else {
+                resultText += `<p class="wrong">Question ${q.slice(1)}: Wrong! Correct answer is <strong>${answers[q]}</strong>.</p>`;
+            }
+        }
+
+        resultText = `<h3>Your Score: ${score} / ${totalQuestions}</h3>` + resultText;
+        document.getElementById("result").innerHTML = resultText;
+    }
+</script>
+
+</body>
+</html>

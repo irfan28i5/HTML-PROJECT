@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Length Checker</title>
+    <style>
+        body {
+            background-color: lab(92.34% 6.12 2.2); /* Light gray background */
+            color: black; /* Ensure text stays black */
+            font-family: Arial, sans-serif; /* Optional: better font */
+        }
+    </style>
+    <style>
+        body {
+            background-color: lab(92.34% 6.12 2.2); /* Light gray background */
+            color: black; /* Ensure text stays black */
+            font-family: Arial, sans-serif; /* Optional: better font */
+        }
+    </style>
+</head>
+<body>
+    <h2>Know the length of your name.....</h2>
+    <div>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="submitName()">Submit</button>
+        <button onclick="resetInput()">Reset</button>
+    </div>
+
+    <script>
+        function submitName() {
+            var name = document.getElementById("nameInput").value.trim();
+            if (name === "") {
+                alert("Please enter your name.");
+                return;
+            }
+            var length = name.length;
+            alert("Hello " + name + "!  Your name Length is:  " + length);
+            document.getElementById("nameInput").value = "";
+        }
+        function resetInput() {
+            document.getElementById("nameInput").value = "";
+        }
+    </script>
+</body>
+</html>
